@@ -1,0 +1,196 @@
+h1 {
+  margin-bottom: 24px;
+}
+
+.container {
+  padding: 0 32px;
+  width: 100%;
+
+  .wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+
+    .table-container {
+      background: #ffffff;
+      width: 100%;
+      overflow-x: auto;
+      padding: 24px;
+      box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+        0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+      border-radius: 6px;
+
+      &::-webkit-scrollbar {
+        width: 0;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+
+        tbody {
+          background: #ffffff;
+
+          &::after {
+            content: "";
+            display: block;
+            height: 18px;
+            background: #ffffff;
+          }
+
+          &:last-child {
+            animation: reveal 1.25s ease forwards;
+          }
+
+          tr {
+            &:first-child {
+              background: #038387;
+            }
+
+            &:last-child {
+              td {
+                padding: 8px 24px;
+                border-bottom: 2px solid #03828798;
+              }
+            }
+
+            td {
+              border: 1px solid #038287a6;
+              border-collapse: collapse;
+              padding: 4px 8px;
+              vertical-align: middle;
+              font-size: 16px;
+              font-weight: 600;
+
+              .add-new-answer-btn {
+                font-size: 12px;
+                padding: 4px 18px;
+                height: unset;
+                background: #05a6f0 !important;
+                color: #ffffff !important;
+              }
+
+              .question-title-wrapper {
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                padding: 4px;
+
+                p {
+                  font-weight: 700;
+                  font-size: 22px;
+                  color: #ffffff;
+                }
+
+                .question-edit-btn {
+                  padding: 0 !important;
+                  height: 20px;
+                  width: 20px;
+                  min-width: unset;
+                  display: inline-flex;
+                  align-items: center;
+                  justify-content: center;
+                  background: none;
+                  border: none;
+
+                  mat-icon {
+                    font-size: 18px;
+                    color: #ffffff;
+                    line-height: 18px;
+                    height: unset;
+                  }
+                }
+
+                input {
+                  font-size: 16px;
+                  padding: 4px 8px;
+                  border: none;
+                  border-radius: 4px;
+                  width: 100%;
+                }
+              }
+
+              &.answer {
+                animation: reveal 1.25s ease forwards;
+              }
+
+              .delete-btn-wrapper {
+                display: flex;
+                justify-content: flex-end;
+                padding-right: 48px;
+
+                .delete-btn {
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  background: none;
+                  border: none;
+
+                  mat-icon {
+                    height: unset;
+                    font-size: 24px;
+                    line-height: 24px;
+                    color: #ffffff;
+                  }
+                }
+              }
+
+              .actions-btns-wrapper {
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                justify-content: center;
+
+                button {
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  background: none;
+                  border: none;
+
+                  mat-icon {
+                    color: #038387;
+                    font-size: 20px;
+                    line-height: 20px;
+                    height: unset;
+                  }
+                }
+              }
+
+              input {
+                padding: 4px 12px;
+                width: 100%;
+                border-radius: 4px;
+                font-size: 14px;
+                border: 1px solid #cccccc;
+              }
+            }
+          }
+        }
+      }
+
+      .add-new-btn-wrapper {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+
+        .add-new-btn,
+        .save-btn {
+          margin-top: 12px;
+          background: #038387 !important;
+          color: #ffffff !important;
+          font-size: 16px;
+          min-width: 200px;
+        }
+      }
+    }
+  }
+}
+
+@keyframes reveal {
+  0% {
+    background: #1df8b657;
+  }
+  100% {
+    background: #ffffff;
+  }
+}
